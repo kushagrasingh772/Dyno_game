@@ -1,2 +1,2 @@
 # Botgame
- Automating python bot game
+ Automating Dyno bot game using python
