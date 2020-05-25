@@ -6,17 +6,17 @@ from numpy import *
 class cordinates():
     replaybtn=(480,400)
     dinasaur=(246,405)
-#x= 320 cordinate to check for tree
-#y= 415 cordinate for half tree 
 
 def restartgame():
     pyautogui.click(cordinates.replaybtn)
+    pyautogui.keyDown   ('down')
 
 
 def pressSpace():
+    pyautogui.keyUp('down')
     pyautogui.keyDown('space')
-    time.sleep(0.05)
     print("jump")
+    time.sleep(0.18)
     pyautogui.keyUp('space')
 
 def imageGrab():
@@ -32,6 +32,7 @@ def main():
 while True:
   if (imageGrab()!=1027):
      pressSpace()
+     time.sleep(0.1)
 
 main()
 
